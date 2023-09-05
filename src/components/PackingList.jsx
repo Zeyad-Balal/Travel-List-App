@@ -1,4 +1,5 @@
 import Item from "./Item";
+import { useState } from "react";
 
 //Static Data
 const initialItems = [
@@ -11,11 +12,26 @@ const initialItems = [
 ];
 
 //List Component, which display what user select to his trip..
-const PackingList = () => {
+const PackingList = ({ item }) => {
+  const [items, setItems] = useState(initialItems);
+
+  /*const handleAddItem = (item) => {
+    setItems((items) => [...items, items]);
+  };*/
+
+  const handleDeleteItem = (id) => {
+    console.log(id);
+    setItems((currentItems) => currentItems.filter((item) => item.id !== id));
+  };
+
   return (
     <ul className="list">
-      {initialItems.map((item) => (
-        <Item item={item} key={item.id} />
+      {items.map((item) => (
+        <Item
+          item={item}
+          key={item.id}
+          onDelete={() => handleDeleteItem(item.id)}
+        />
       ))}
     </ul>
   );

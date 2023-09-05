@@ -78,10 +78,9 @@ input {
   background-color: #5a3e2b;
   color: #ffebb3;
   padding: 7.4999rem 0;
-
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
-  flex-direction: column;
   gap: 3.2rem;
   align-items: center;
 }

@@ -13,7 +13,7 @@ const Form = () => {
     if (!description) return null;
     const newItem = { description, quantity, packed: false, id: Date.now() };
     console.log(newItem);
-
+    //add new item
     //After adding new item re-init the input fields
     setDescription("");
     setQuantity(1);
