@@ -1,9 +1,10 @@
 //it just display what percent user packed from his list
-const Stats = () => {
+const Stats = ({ numItems, numPacked, percentage }) => {
   return (
     <footer className="stats">
       <em>
-        You have X items in your list, you packed X from list which is (X%)
+        You have {numItems} items in your list, you packed {numPacked} from list
+        which is ({percentage}%)
       </em>
     </footer>
   );
