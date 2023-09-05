@@ -3,7 +3,7 @@ import { useState } from "react";
 
 //Static Data
 const initialItems = [
-  { id: 1, description: "Passports", quantity: 2, packed: true },
+  { id: 1, description: "Passports", quantity: 2, packed: false },
   { id: 2, description: "Socks", quantity: 12, packed: false },
   { id: 3, description: "Charger", quantity: 1, packed: false },
   //{ id: 4, description: "tent", quantity: 2, packed: true },
@@ -14,6 +14,14 @@ const initialItems = [
 //List Component, which display what user select to his trip..
 const PackingList = ({ item }) => {
   const [items, setItems] = useState(initialItems);
+
+  const handleToggleItem = (id) => {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item
+      )
+    );
+  };
 
   /*const handleAddItem = (item) => {
     setItems((items) => [...items, items]);
@@ -31,6 +39,7 @@ const PackingList = ({ item }) => {
           item={item}
           key={item.id}
           onDelete={() => handleDeleteItem(item.id)}
+          onToggle={() => handleToggleItem(item.id)}
         />
       ))}
     </ul>
