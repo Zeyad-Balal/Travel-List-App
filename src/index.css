@@ -74,7 +74,7 @@ input {
   background-color: #76c7ad;
 }
 
-.list {
+/*.list {
   background-color: #5a3e2b;
   height: 50.2vh;
   color: #ffebb3;
@@ -85,6 +85,17 @@ input {
   justify-content: space-around;
   gap: 3.2rem;
   align-items: center;
+}*/
+.list {
+  background-color: #5a3e2b;
+  height: 50.2vh;
+  color: #ffebb3;
+  padding: 7.4999rem 0;
+  display: flex;
+  justify-content: center; /* Center the columns horizontally */
+  align-items: flex-start; /* Align columns to the top */
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  gap: 3.2rem;
 }
 
 .actions button,
