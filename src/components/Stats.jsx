@@ -1,5 +1,8 @@
 //it just display what percent user packed from his list
-const Stats = ({ numItems, numPacked, percentage }) => {
+const Stats = ({ items, numPacked }) => {
+  const numItems = items.length;
+
+  const percentage = Math.round((numPacked / numItems) * 100);
   return (
     <footer className="stats">
       <em>
