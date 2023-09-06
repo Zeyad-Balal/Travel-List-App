@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 //Form Component in which user can select the item and its quantity then add it to his list
-const Form = ({ onAdd }) => {
+const Form = ({ onAdd, onClear }) => {
   //element control first step
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
@@ -19,6 +19,9 @@ const Form = ({ onAdd }) => {
     setDescription("");
     setQuantity(1);
   };
+
+  //sort handling...
+  const [sortBy, setSortBy] = useState("input");
 
   return (
     <form className="add-form" onSubmit={handleSubmit}>
@@ -48,6 +51,7 @@ const Form = ({ onAdd }) => {
         onChange={(e) => setDescription(e.target.value)}
       />
       <button onClick={handleSubmit}>➕</button>
+      <button onClick={onClear}>Clear List</button>
     </form>
   );
 };

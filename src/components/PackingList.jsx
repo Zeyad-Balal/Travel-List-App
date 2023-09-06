@@ -1,5 +1,6 @@
 import Item from "./Item";
 import Stats from "./Stats";
+
 import { useState, useEffect } from "react";
 
 //List Component, which display what user select to his trip..
@@ -32,7 +33,7 @@ const PackingList = ({ item, data }) => {
   };
 
   return (
-    <>
+    <div>
       <ul className="list">
         {items.map((item) => (
           <Item
@@ -43,8 +44,9 @@ const PackingList = ({ item, data }) => {
           />
         ))}
       </ul>
+
       <Stats items={data} numPacked={packItems} />
-    </>
+    </div>
   );
 };
 
