@@ -20,9 +20,6 @@ const Form = ({ onAdd, onClear }) => {
     setQuantity(1);
   };
 
-  //sort handling...
-  const [sortBy, setSortBy] = useState("input");
-
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h3>What's your needs for this trip?</h3>

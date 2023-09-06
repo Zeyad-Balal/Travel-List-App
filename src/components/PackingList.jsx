@@ -4,7 +4,7 @@ import Stats from "./Stats";
 import { useState, useEffect } from "react";
 
 //List Component, which display what user select to his trip..
-const PackingList = ({ item, data }) => {
+const PackingList = ({ data }) => {
   const [items, setItems] = useState(data);
 
   //handle packed items number...
@@ -28,10 +28,11 @@ const PackingList = ({ item, data }) => {
   };
 
   const handleDeleteItem = (id) => {
-    console.log(id);
-    setItems((currentItems) => currentItems.filter((item) => item.id !== id));
+    //console.log(id);
+    const updatedData = items.filter((item) => item.id !== id);
+    console.log(updatedData);
+    setItems(updatedData);
   };
-
   return (
     <div>
       <ul className="list">
@@ -45,7 +46,7 @@ const PackingList = ({ item, data }) => {
         ))}
       </ul>
 
-      <Stats items={data} numPacked={packItems} />
+      <Stats items={items} numPacked={packItems} />
     </div>
   );
 };

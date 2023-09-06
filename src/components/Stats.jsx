@@ -5,7 +5,7 @@ const Stats = ({ items, numPacked }) => {
   if (!items.length)
     return (
       <p className="stats">
-        <em>Start adding your list 🚀</em>
+        <em>Start adding your list</em>
       </p>
     );
   return (
