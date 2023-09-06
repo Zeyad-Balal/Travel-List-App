@@ -4,17 +4,17 @@ import Stats from "./Stats";
 import { useState, useEffect } from "react";
 
 //List Component, which display what user select to his trip..
-const PackingList = ({ data }) => {
-  const [items, setItems] = useState(data);
+const PackingList = ({ data , onItemDeleted }) => {
+/*   const [items, setItems] = useState(data); */
 
   //handle packed items number...
   const [packItems, setPackedItems] = useState(0);
 
-  useEffect(() => {
+/*   useEffect(() => {
     setItems(data);
   }, [data]);
-
-  const handleToggleItem = (id) => {
+ */
+  /* const handleToggleItem = (id) => {
     //handle packed items number & Toggling...
     const updated_data = items.map((item) =>
       item.id === id ? { ...item, packed: !item.packed } : item
@@ -25,29 +25,29 @@ const PackingList = ({ data }) => {
     console.log(newPackedItemCount);
     setItems(updated_data);
     setPackedItems(newPackedItemCount);
-  };
+  }; */
 
   const handleDeleteItem = (id) => {
-    //console.log(id);
-    const updatedData = items.filter((item) => item.id !== id);
-    console.log(updatedData);
-    setItems(updatedData);
+    onItemDeleted(id)
+    
   };
   return (
-    <div>
+    <>
       <ul className="list">
-        {items.map((item) => (
+        {data.map((item) => (
           <Item
             item={item}
             key={item.id}
             onDelete={() => handleDeleteItem(item.id)}
-            onToggle={() => handleToggleItem(item.id)}
+            /* onToggle={() => handleToggleItem(item.id)} */
           />
         ))}
       </ul>
 
-      <Stats items={items} numPacked={packItems} />
-    </div>
+
+    
+    <Stats items={data} numPacked={packItems} />
+    </>
   );
 };
 

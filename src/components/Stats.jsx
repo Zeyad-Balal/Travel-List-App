@@ -13,8 +13,7 @@ const Stats = ({ items, numPacked }) => {
       <em>
         {percentage === 100
           ? "You're ready to go now, have a safe flight ✈️"
-          : `You have ${numItems} items in your list, you packed ${numPacked} from list
-        which is (${percentage}%)`}
+          : ` ${numPacked} out of ${numItems} which is ${percentage}%`}
       </em>
     </footer>
   );

@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
 }
 
 html {
@@ -16,6 +17,7 @@ body {
   color: #5a3e2b;
   font-family: "Quicksand";
   font-weight: 500;
+  background-color:#5a3e2b;
 }
 
 .app {
@@ -72,9 +74,8 @@ input {
 
 .list {
   background-color: #5a3e2b;
-  height: 50.2vh;
+  
   color: #ffebb3;
-  padding: 7.4999rem 0;
   display: flex;
   justify-content: center; /* Center the columns horizontally */
   align-items: flex-start; /* Align columns to the top */
@@ -89,11 +90,9 @@ input {
   margin: 0 0.8rem;
 }
 
-.list ul {
+.list{
   list-style: none;
-  width: 80%;
-  overflow: scroll;
-
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.2rem;
@@ -112,7 +111,6 @@ input[type="checkbox"] {
   width: 2rem;
   accent-color: #e5771f;
 }
-
 .list li button {
   cursor: pointer;
   background: none;
@@ -121,10 +119,56 @@ input[type="checkbox"] {
   padding: 0.8rem;
   transform: translateY(2px);
 }
-
 .stats {
   background-color: #76c7ad;
   text-align: center;
   font-weight: 700;
+  width: -webkit-fill-available ;
   padding: 3.2rem 0;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+  background-color: #5a3e2b;
+}
+@media (max-width:768px) {
+  body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  h1{
+    font-size: 2em;
+  }
+  .add-form{
+    flex-direction: column;
+  }
+  .add-form button , select , input {
+    width: -webkit-fill-available;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .list{
+    overflow: scroll;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    padding-left: 2px;
+    flex-grow: 1;
+    padding-right: 2px;
+    flex-direction: column;
+  
+  }
+  ul{
+    width: -webkit-fill-available;
+    gap: 10px;
+  }
+  li{
+    width: -webkit-fill-available ;
+    background-color: rgb(42, 42, 42);
+    border-radius: 5px;
+    justify-content: space-between;
+   
+  }
 }
