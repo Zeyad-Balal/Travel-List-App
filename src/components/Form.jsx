@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 //Form Component in which user can select the item and its quantity then add it to his list
-const Form = () => {
+const Form = ({ onAdd }) => {
   //element control first step
   const [description, setDescription] = useState("");
   const [quantity, setQuantity] = useState(1);
@@ -12,8 +12,9 @@ const Form = () => {
     //guard condition
     if (!description) return null;
     const newItem = { description, quantity, packed: false, id: Date.now() };
-    console.log(newItem);
+    //console.log(newItem);
     //add new item
+    onAdd(newItem);
     //After adding new item re-init the input fields
     setDescription("");
     setQuantity(1);

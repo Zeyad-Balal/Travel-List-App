@@ -1,6 +1,6 @@
 import Item from "./Item";
 import Stats from "./Stats";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //List Component, which display what user select to his trip..
 const PackingList = ({ item, data }) => {
@@ -8,6 +8,10 @@ const PackingList = ({ item, data }) => {
 
   //handle packed items number...
   const [packItems, setPackedItems] = useState(0);
+
+  useEffect(() => {
+    setItems(data);
+  }, [data]);
 
   const handleToggleItem = (id) => {
     //handle packed items number & Toggling...
@@ -21,10 +25,6 @@ const PackingList = ({ item, data }) => {
     setItems(updated_data);
     setPackedItems(newPackedItemCount);
   };
-
-  /*const handleAddItem = (item) => {
-    setItems((items) => [...items, items]);
-  };*/
 
   const handleDeleteItem = (id) => {
     console.log(id);
