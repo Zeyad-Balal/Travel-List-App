@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- 
 }
 
 html {
@@ -17,7 +16,7 @@ body {
   color: #5a3e2b;
   font-family: "Quicksand";
   font-weight: 500;
-  background-color:#5a3e2b;
+  background-color: #5a3e2b;
 }
 
 .app {
@@ -74,7 +73,7 @@ input {
 
 .list {
   background-color: #5a3e2b;
-  
+
   color: #ffebb3;
   display: flex;
   justify-content: center; /* Center the columns horizontally */
@@ -90,7 +89,7 @@ input {
   margin: 0 0.8rem;
 }
 
-.list{
+.list {
   list-style: none;
   width: 100%;
   flex-grow: 1;
@@ -129,75 +128,91 @@ input[type="checkbox"] {
   background-color: #76c7ad;
   text-align: center;
   font-weight: 700;
-  width: -webkit-fill-available ;
+  width: -webkit-fill-available;
   padding: 3.2rem 0;
 }
-body{
+body {
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.App{
+.App {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   height: 100vh;
   background-color: #5a3e2b;
 }
-@media (max-width:768px) {
-  body{
+@media (max-width: 768px) {
+  body {
     height: 100%;
     display: flex;
     flex-direction: column;
   }
-  h1{
+  h1 {
     font-size: 2em;
-   padding: 10px;
+    padding: 10px;
   }
-  .add-form{
+  .add-form {
     flex-direction: column;
   }
-  .add-form button , select , input {
+  .add-form button,
+  select,
+  input {
     width: -webkit-fill-available;
     margin-left: 10px;
     margin-right: 10px;
   }
-  .list{
+  .list {
     overflow: scroll;
-    padding-top:1rem;
+    padding-top: 1rem;
     overflow-x: hidden;
-    padding-bottom:1rem;
+    padding-bottom: 1rem;
     padding-left: 2px;
     flex-grow: 1;
     padding-right: 2px;
     flex-direction: column;
-  
   }
-  h3{
+  h3 {
     text-align: center;
     margin-left: 5px;
   }
-  ul{
+  ul {
     width: -webkit-fill-available;
     gap: 10px;
   }
-  li{
-    width: -webkit-fill-available ;
+  li {
+    width: -webkit-fill-available;
     background-color: rgba(42, 42, 42, 0.515);
     margin: 2px;
     border-radius: 5px;
     justify-content: space-between;
-   
   }
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 5px;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #5a3e2b;
-}
-::-webkit-scrollbar-track{
-
   background-color: #e5771f;
 }
+::-webkit-scrollbar-track {
+  background-color: #5a3e2b;
+}
+.s {
+  /*  margin-right: 10px;
+  border: 2px solid #f4a226;
+  border-radius: 15px;
+  padding: 6px; */
+  background-color: #f4a226;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 2px 5px;
+  border-radius: 7px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+/* .item-span {
+  display: flex;
+  gap: 0.9rem;
+}
+ */

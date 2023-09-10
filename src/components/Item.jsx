@@ -8,9 +8,10 @@ const Item = ({ item, onDelete, onToggle }) => {
         onChange={() => onToggle(item.id)}
       />
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
-        {item.quantity} {item.description}
+        <span className="s">x{item.quantity}</span> {item.description}
       </span>
       <button onClick={() => onDelete(item.id)}>❌</button>
+      {/* <button style={{ backgroundColor: "white" }}>+</button> */}
     </li>
   );
 };
