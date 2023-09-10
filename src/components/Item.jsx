@@ -10,7 +10,9 @@ const Item = ({ item, onDelete, onToggle }) => {
       <span style={item.packed ? { textDecoration: "line-through" } : {}}>
         <span className="s">x{item.quantity}</span> {item.description}
       </span>
-      <button id="delete" onClick={() => onDelete(item.id)}>❌</button>
+      <button id="delete" onClick={() => onDelete(item.id)}>
+        ❌
+      </button>
       {/* <button style={{ backgroundColor: "white" }}>+</button> */}
     </li>
   );

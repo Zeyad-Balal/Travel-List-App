@@ -200,11 +200,11 @@ body {
 ::-webkit-scrollbar-track {
   background-color: #5a3e2b;
 }
-span{
+span {
   display: flex;
   gap: 1rem;
 }
-.s{
+.s {
   /*  margin-right: 10px;
   border: 2px solid #f4a226;
   border-radius: 15px;
@@ -215,27 +215,30 @@ span{
   border-radius: 9px;
   font-weight: bold;
 }
- input[type="text"]{
+.custom-icon {
+  color: #ff0000;
+}
+input[type="text"] {
   cursor: text;
- }
-button:hover{
+}
+button:hover {
   background-color: #96dac5;
-  transition: .2s ease-in;
+  transition: 0.2s ease-in;
   transform: translateY(-2px);
 }
-button:focus{ 
+button:focus {
   transform: translateY(0px);
 }
-::selection{
+::selection {
   background-color: #5a3e2b;
   color: #f4a226;
 }
-#delete:hover{
+#delete:hover {
   background-color: rgba(255, 0, 0, 0.556);
-  transition: .2s ease-in;
+  transition: 0.2s ease-in;
 }
 @media (max-width: 375px) {
-  .App{
+  .App {
     height: auto;
   }
 }
